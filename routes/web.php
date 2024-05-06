@@ -27,8 +27,9 @@ Route::get('/blog', function () {
     return view('blog.index');
 });
 
-Route::get('/todoapp',[TodoAppController::class,'index']);
-Route::post('/',[TodoAppController::class,'store'])->name('todoapp.store');
+Route::get('/todoapp',[TodoAppController::class,'index'])->name('todoapp.index');
+
+Route::post('/todoapp',[TodoAppController::class,'store'])->name('todoapp.store');
 
 
 Route::get('/contact',function(){
